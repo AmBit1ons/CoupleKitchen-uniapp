@@ -1,0 +1,497 @@
+/* #ifdef H5 */
+	//在独立页面给page加高度100%， 此时h5页面正常但是在小程序中依旧是不起作用的
+	page {
+		height: 100% !important;
+	}
+
+	/* #endif */
+
+	.container {
+		height: 100%;
+		position: relative;
+	}
+
+  @mixin flex {
+    /* #ifndef APP-NVUE */
+    display: flex;
+    /* #endif */
+    flex-direction: row;
+  }
+
+  @mixin height {
+    /* #ifndef APP-NVUE */
+    height: 100%;
+    /* #endif */
+    /* #ifdef APP-NVUE */
+    flex: 1;
+    /* #endif */
+  }
+
+	.header {
+		height: 10%;
+		width: 100%;
+		padding-top: 15rpx;
+		padding-left: 15rpx;
+		background-color: white;
+		box-sizing: border-box;
+	}
+
+	.notice-bar {
+		height: 5%;
+		overflow: hidden;
+	}
+
+	.body {
+		height: 85%;
+		display: flex;
+		overflow: hidden;
+	}
+
+	.left {
+		width: 26%;
+		height: 100%;
+		background-color: white;
+	}
+
+	.right {
+		width: 74%;
+		height: 100%;
+		background-color: yellow;
+	}
+
+	.store-name {
+		height: 20rpx;
+		display: flex;
+		text-justify: center;
+		text-align: center;
+		font-size: 33rpx;
+		margin-bottom: 20rpx;
+	}
+
+	.title-name {
+		margin-top: -5rpx;
+	}
+
+	.welcome {
+		height: 60rpx;
+		font-size: 28rpx;
+		font-weight: 200;
+	}
+
+	.table-number {
+		height: 60rpx;
+		font-size: 28rpx;
+		font-weight: 200;
+	}
+
+	.category-scroll-Y {
+		height: 100%;
+    background-color: #f2f3f2;
+  }
+
+	.category-scroll-view-item {
+		text-align: center;
+		font-size: 30rpx;
+	}
+
+	.category-current {
+		background-color: #fff;
+	}
+
+	.foods-scroll-Y {
+		height: 100%;
+		width: 100%;
+		padding: 15rpx 15rpx 0 15rpx;
+		box-sizing: border-box;
+		background-color: #fff;
+	}
+
+	.foods-list {
+		// background-color: yellow;
+	}
+
+	.banners {
+		height: calc(300 / 550 * 510rpx)
+	}
+
+	.img {
+		width: 100%;
+		height: 100%;
+		border-radius: 8rpx;
+	}
+
+	.category-name-1 {
+		padding: 24rpx 0;
+		display: block;
+        text-align: center;
+		color: $text-color-base;
+	}
+
+  .category-name-2 {
+    padding: 30rpx 0;
+    display: flex;
+    align-items: center;
+    color: $text-color-base;
+  }
+
+	.icon {
+		width: 38rpx;
+		height: 38rpx;
+		margin-left: 10rpx;
+	}
+
+	.food-item {
+		display: flex;
+	}
+
+	.prod-image {
+		width: 140rpx;
+		height: 140rpx;
+		margin: 12rpx;
+		border-radius: 10rpx;
+	}
+
+	.right-items {
+		flex: 1;
+		height: 160rpx;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding-right: 14rpx;
+		// background-color: blue;
+	}
+
+	.prod-name {
+		width: 100%;
+		font-size: $font-size-base;
+		color: $text-color-base;
+		margin: 16rpx 0rpx 0rpx 6rpx
+	}
+
+	.price {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin: 0rpx 0rpx 16rpx 6rpx
+	}
+
+	.add-reduce-box{
+		  width: 150rpx;
+		  display: flex;
+		  align-items: center;
+		  // background-color: red;
+		  margin-left: 132rpx;
+	}
+	.add-reduce-btn {
+		padding: 0;
+		font-size: $font-size-base;
+		width: 44rpx;
+		height: 44rpx;
+		line-height: 44rpx;
+		border-radius: 100%;
+		margin-right: 8rpx;
+		background-color: #1296db;
+	}
+
+	.number{
+		margin-right: -3rpx;
+	}
+
+	.add-box{
+		width:280rpx;
+		// background-color: red;
+
+	}
+
+	.add-btn-1 {
+		padding: 0;
+		font-size: $font-size-base;
+		width: 44rpx;
+		height: 44rpx;
+		line-height: 44rpx;
+		border-radius: 100%;
+		margin-right: 8rpx;
+		background-color:#87CEEB;
+	}
+
+  .add-btn-2 {
+    padding: 0;
+    font-size: 22rpx;
+    width: 110rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    border-radius: 14rpx;
+    margin-right: 8rpx;
+	background-color:#87CEEB;
+  }
+
+  .popup-content {
+    height: 580rpx;
+    width: 600rpx;
+    background-color: #fff;
+  }
+
+  .food-name-box{
+	  width: 100%;
+	  // background-color: red;
+	  margin-left: 20rpx;
+	  margin-top: 20rpx;
+  }
+
+  .text-tital{
+	  font-size: 30rpx;
+	   font-weight: 300;
+  }
+
+  .attributes{
+	  width: 100%;
+	  // background-color: yellow;
+	  margin-top: 40rpx;
+	   margin-left: 20rpx;
+  }
+
+  .attribute-text{
+	  font-size: 28rpx;
+	   font-weight: 300;
+  }
+
+  .attribute-value{
+	  margin-top: 20rpx;
+	  width: 100%rpx;
+	  // height: 120rpx;
+	  // background-color: blue;
+  }
+
+	.attributeValue-current{
+		background-color: rgb(249, 221, 137) !important;
+		color: black !important;
+	}
+  .attribute-value-item{
+	  //width: 100rpx;
+	  height: 52rpx;
+	  line-height: 52rpx;
+	  display: inline-block;
+	  background-color: rgb(135, 206, 235);
+	  color: white;
+	  text-align: center;
+	  margin-right: 20rpx;
+	  border-radius: 8rpx;
+	  font-size: 26rpx;
+	  font-weight: 300;
+  }
+
+	.food-information{
+		display: flex;
+		align-items: center;
+		// justify-content:center;
+		width: 100%;
+		height: 120rpx;
+		background-color: white;
+		margin-top: 40rpx;
+	}
+
+	.price-attribute-value{
+		display: flex;
+		// align-items: center;
+		// justify-content:center;
+		 flex-direction:column;
+		 width: 260rpx;
+		 margin-left: 20rpx;
+
+	}
+
+	.text-attribute-value{
+		font-size: 28rpx;
+		font-weight: 200;
+		margin-left: 6rpx;
+	}
+
+	.counter-box{
+		  width: 300rpx;
+		  display: flex;
+		  align-items: center;
+		  // background-color: blue;
+		  margin-left: 150rpx;
+	}
+	.btn {
+		padding: 0;
+		font-size: $font-size-base;
+		width: 44rpx;
+		height: 44rpx;
+		line-height: 44rpx;
+		border-radius: 100%;
+		margin-right: 8rpx;
+		background-color: #1296db;
+	}
+
+	.add-to-Cart-box{
+		width: 100%;
+		height: 75rpx;
+		background-color: green;
+	}
+
+	.cart-text{
+		display: block;
+		text-align: center;
+		line-height: 75rpx;
+		color: #FFFFFF;
+		font-size: 28rpx;
+		background-color: #1296db;
+	}
+
+
+
+
+  .cart-list{
+	  padding-bottom: 160rpx;
+  }
+
+  .cart-popup-content {
+    // height: 360rpx;
+	min-height: 18vh;
+	max-height: 56vh;
+    background-color: #fff;
+  }
+
+  .clearCartBox{
+	  width: 100%;
+	  height: 42rpx;
+	  background-color: #d9ecdd;
+	  position: fixed;
+	  top: 0rpx;
+	  z-index: 10;
+
+  }
+
+  .clearCart{
+	  display: block;
+	  text-align: right;
+	  font-size: 26rpx;
+	  margin-right: 20rpx;
+	  color: #7fb9a4;
+	  line-height: 42rpx;
+  }
+
+
+  	  .cart-item{
+		   padding: 50rpx 20rpx 0rpx 20rpx;
+	  }
+
+  .cart-content{
+	  height: 114rpx;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	   border-bottom: 1rpx #e6dada solid;
+	   // background-color: yellow;
+	    box-sizing: border-box;
+  }
+
+  .cart-food-box{
+	  width: 300rpx;
+	  // background-color: red;
+  }
+
+  .cart-food-attributes{
+	  font-size: 24rpx;
+	  font-weight: 200;
+  }
+
+  .cart-food-name{
+	  font-size: 26rpx;
+  }
+
+  .counter-box{
+	  width: 150rpx;
+	  display: flex;
+	  align-items: center;
+	  // background-color: red;
+	  margin-left: 150rpx;
+  }
+  .btn {
+  	padding: 0;
+  	font-size: $font-size-base;
+  	width: 44rpx;
+  	height: 44rpx;
+  	line-height: 44rpx;
+  	border-radius: 100%;
+  	margin-right: 8rpx;
+  }
+
+ .add-to-cart{
+	 position: absolute;
+	 bottom: 30rpx;
+	 left: 30rpx;
+	 right: 30rpx;
+	 height: 96rpx;
+	 border-radius: 48rpx;
+	 box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2);
+	 background-color: #FFFFFF;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 z-index: 9999;
+ }
+
+ .img-box{
+	 margin-left: 60rpx;
+	 width: 100rpx;
+	 height: 100rpx;
+ }
+ .cart-img{
+	 width:100%;
+	 height: 100%;
+	 position: relative;
+	 margin-top: -26rpx;
+ }
+
+ .tag {
+ 	background-color: $color-warning;
+ 	color: $text-color-white;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	font-size: $font-size-sm;
+ 	position: absolute;
+ 	left:120rpx;
+ 	top: -32rpx;
+ 	border-radius: 100%;
+ 	padding: 4rpx;
+ 	width: 40rpx;
+ 	height: 40rpx;
+ 	opacity: .9;
+ }
+
+ .cart-price{
+	 margin-left: 20rpx;
+ }
+
+ .pay-btn{
+	 height: 100%;
+	 padding: 0 30rpx;
+	 color: #FFFFFF;
+	 border-radius: 0 50rpx 50rpx 0;
+	 display: flex;
+	 align-items: center;
+	 font-size: $font-size-base;
+	 margin-right: 0rpx;
+	 background-color: #87CEEB;
+ }
+
+ .clearReminder{
+	 font-size: 32rpx;
+	 font-weight: 200;
+ }
+ 
+ .settlement{
+	 // width: 400rpx;
+	 // height: 400rpx;
+ }
+ 
+ .text{
+	 display: block;
+	text-align: center;
+	line-height: 400rpx;
+ }
